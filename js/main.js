@@ -11,36 +11,29 @@
 
 class ImageMaker {
     constructor(){
-        // When this class is instantiated, the `constructor()` method is executed.
-        // TODO: Set up attributes that point to the HTML elements we wish to work with.
+      
+        this.imagePreview = document.getElementById('imagePreview');
 
-        // TODO: Select the `#image-preview` div using any document selector method.
-        this.imagePreview = ;
+        this.topText = document.createElement('p');
+        
+        this.topText.setAttribute('class', 'top-text');
+      
+        this.imagePreview.appendChild('this.topText')
+      
 
-        // TODO: create a new `<p>` element called `this.topText`
-        this.topText = ;
-        // TODO: Add a `class` attribute to `this.topText` that contains the classname "top-text".
+        this.bottomText = document.createElement('p');
+        
+        this.bottomText.setAttribute('class', 'bottom-text');
+        
+        this.imagePreview.appendChild('this.bottomText');
 
-        // TODO: Append `this.topText` as a child element to `this.imagePreview`
+      
+      
+        this.backgroundInput = document.querySelector('select[name="backgroundImage"]');
 
+        this.topTextInput = document.querySelector('input[name="topText"]');
 
-        // TODO: create a new `<p>` element called `this.bottomText`
-        this.bottomText = ;
-        // TODO: Add a `class` attribute to `this.bottomText` that contains the classname "bottom-text".
-
-        // TODO: Append `this.bottomText` as a child element to `this.imagePreview`
-
-        // This class also needs to use the form fields to read user input. Set
-        // those up for future use, too.
-
-        // TODO: Select the `input` element with the `name` attribute "backgroundImage"
-        this.backgroundInput = ;
-
-        // TODO: Select the `input` element with the `name` attribute "topText"
-        this.topTextInput = ;
-
-        // TODO: Select the `input` element with the `name` attribute "bottomText"
-        this.bottomTextInput = ;
+        this.bottomTextInput = document.querySelector('input[name="bottomTexr"]');
 
         // NOTE: If you add additional form fields to modify other aspects of
         // the image, then you will need to make attributes for each of those
@@ -53,12 +46,11 @@ class ImageMaker {
         // elements selected in the `constructor()` of this class in order to
         // update `this.imagePreview`.
 
-        // TODO: Update the `background-image` CSS property for `this.imagePreview`.
-
-        // TODO: Update the `innerHTML` of `this.topText`.
-
-        // TODO: Update the `innerHTML` of `this.bottomText`
-
+        this.imagePreview.style.backgroundImage = `url(images/${this.backgroundInput.value})`;
+      
+        this.topText.innerHTML = this.topTextInput.value;
+       
+        this.bottomText.innerHTML = this.bottomTextInput.value;
 
     }
     downloadImage(){
