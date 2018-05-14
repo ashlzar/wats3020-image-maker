@@ -18,14 +18,14 @@ class ImageMaker {
         
         this.topText.setAttribute('class', 'top-text');
       
-        this.imagePreview.appendChild('this.topText');
+        this.imagePreview.appendChild(this.topText);
       
 
         this.bottomText = document.createElement('p');
         
         this.bottomText.setAttribute('class', 'bottom-text');
         
-        this.imagePreview.appendChild('this.bottomText');
+        this.imagePreview.appendChild(this.bottomText);
 
       
       
