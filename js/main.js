@@ -33,7 +33,7 @@ class ImageMaker {
 
         this.topTextInput = document.querySelector('input[name="topText"]');
 
-        this.bottomTextInput = document.querySelector('input[name="bottomTexr"]');
+        this.bottomTextInput = document.querySelector('input[name="bottomText"]');
 
         // NOTE: If you add additional form fields to modify other aspects of
         // the image, then you will need to make attributes for each of those
