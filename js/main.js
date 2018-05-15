@@ -12,7 +12,7 @@
 class ImageMaker {
     constructor(){
       
-        this.imagePreview = document.getElementById('imagePreview');
+        this.imagePreview = document.getElementById('image-preview');
 
         this.topText = document.createElement('p');
         
